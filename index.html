@@ -8,19 +8,21 @@
     <title>线路一：直播1台</title>
 	<script src = "https://cdnjs.cloudflare.com/ajax/libs/flv.js/1.6.2/flv.min.js"></script>
 </head>
-<body>
-<div id="dplayer"></div>
-<script src="node_modules/dplayer/dist/DPlayer.min.js"></script>
-<script>
-    const dp = new DPlayer({
-        container: document.getElementById('dplayer'),
-        live: true,
-            video: {
-              type: 'flv',
-              url: 'http://3abfe9cd.r19.cpolar.top/live/movie.flv',
-        },
-    });
-</script>
+<style>
+            .artplayer-app {
+                width: 1280px;
+                height: 720px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="artplayer-app"></div>
+        <script src="path/to/artplayer.js"></script>
+        <script>
+            var art = new Artplayer({
+                container: '.artplayer-app',
+                url: 'tcp://10.tcp.cpolar.top:11005/live/movie.flv',
+            });
     <h1>这里是线路一；切换线路可能需刷新：</h1>
     <a href = /index.html>线路一</a>；
     <a href = /line2.html>线路二（暂无）</a>；
